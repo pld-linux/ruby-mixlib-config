@@ -6,7 +6,7 @@
 Summary:	Simple ruby config mix-in
 Name:		ruby-%{pkgname}
 Version:	2.0.0
-Release:	0.1
+Release:	1
 License:	Apache v2.0
 Group:		Development/Languages
 Source0:	http://gems.rubyforge.org/gems/%{pkgname}-%{version}.gem
@@ -62,8 +62,3 @@ rm -rf $RPM_BUILD_ROOT
 
 # FIXME, who owns the dir?
 %dir %{ruby_vendorlibdir}/mixlib
-
-%if 0
-%files doc
-%defattr(644,root,root,755)
-%endif
