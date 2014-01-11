@@ -5,15 +5,12 @@
 %define	pkgname	mixlib-config
 Summary:	Simple ruby config mix-in
 Name:		ruby-%{pkgname}
-Version:	2.0.0
+Version:	2.1.0
 Release:	1
 License:	Apache v2.0
 Group:		Development/Languages
 Source0:	http://gems.rubyforge.org/gems/%{pkgname}-%{version}.gem
-# Source0-md5:	95a69a41f70d5f0c64a93bbc982df7a9
-# Silence verbose test output. Fixed upstream in master but not yet released
-# https://github.com/opscode/mixlib-config/commit/fa42def234f3a2d69229340733131b93a887be8d
-Patch0:		mixlib-config-silence-tests.patch
+# Source0-md5:	ca4a97d3f5eeeb09afeb7fb5b884305f
 URL:		http://github.com/opscode/mixlib-config
 BuildRequires:	rpm-rubyprov
 BuildRequires:	rpmbuild(macros) >= 1.665
