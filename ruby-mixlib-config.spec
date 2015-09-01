@@ -6,7 +6,7 @@
 Summary:	Simple ruby config mix-in
 Name:		ruby-%{pkgname}
 Version:	2.1.0
-Release:	3
+Release:	4
 License:	Apache v2.0
 Group:		Development/Languages
 Source0:	http://gems.rubyforge.org/gems/%{pkgname}-%{version}.gem
