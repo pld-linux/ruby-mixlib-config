@@ -5,12 +5,12 @@
 %define	pkgname	mixlib-config
 Summary:	Simple ruby config mix-in
 Name:		ruby-%{pkgname}
-Version:	2.1.0
-Release:	4
+Version:	3.0.27
+Release:	1
 License:	Apache v2.0
 Group:		Development/Languages
-Source0:	http://gems.rubyforge.org/gems/%{pkgname}-%{version}.gem
-# Source0-md5:	ca4a97d3f5eeeb09afeb7fb5b884305f
+Source0:	https://rubygems.org/downloads/%{pkgname}-%{version}.gem
+# Source0-md5:	7aa5f3a67bd15392950923bbe0002c84
 URL:		http://github.com/opscode/mixlib-config
 BuildRequires:	rpm-rubyprov
 BuildRequires:	rpmbuild(macros) >= 1.665
@@ -32,13 +32,13 @@ Requires:	%{name} = %{version}-%{release}
 This package contains documentation for %{name}.
 
 %prep
-%setup -q
+%setup -q -n %{pkgname}-%{version}
 
 %build
 %__gem_helper spec
 
 %if %{with tests}
-rspec
+%{__ruby} -S rspec
 %endif
 
 %install
@@ -52,7 +52,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README.md NOTICE
+%doc LICENSE NOTICE
 %{ruby_vendorlibdir}/mixlib/config.rb
 %{ruby_vendorlibdir}/mixlib/config
 %{ruby_specdir}/%{pkgname}-%{version}.gemspec
